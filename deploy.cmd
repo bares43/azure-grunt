@@ -93,11 +93,8 @@ IF !ERRORLEVEL! NEQ 0 goto error
 :: 7. Run Grunt Task
 :: if [ -e "$DEPLOYMENT_TARGET/Gruntfile.js" ]; then
    echo pred cd
-   cd
    cd "%DEPLOYMENT_TARGET%"      
-   cd 
-   cd "%appdata%"      
-   cd
+   dir
    echo pred gruntem
    call grunt build
    IF !ERRORLEVEL! NEQ 0 goto error
