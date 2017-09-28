@@ -95,7 +95,7 @@ IF !ERRORLEVEL! NEQ 0 goto error
    echo pred cd
    cd "%DEPLOYMENT_TARGET%"
    echo pred gruntem
-   call "./node_modules/.bin/grunt build"
+   call grunt build
    IF !ERRORLEVEL! NEQ 0 goto error
    echo po gruntu
    cd - > /dev/null
