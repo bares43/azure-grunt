@@ -93,6 +93,11 @@ IF !ERRORLEVEL! NEQ 0 goto error
 :: 7. Run Grunt Task
 :: if [ -e "$DEPLOYMENT_TARGET/Gruntfile.js" ]; then
 :: fi
+:: cd "%DEPLOYMENT_TARGET%"      
+cd
+call npm install
+call grunt build
+IF !ERRORLEVEL! NEQ 0 goto error
 
 :: 3. KuduSync
 IF /I "%IN_PLACE_DEPLOYMENT%" NEQ "1" (
@@ -100,11 +105,6 @@ IF /I "%IN_PLACE_DEPLOYMENT%" NEQ "1" (
   IF !ERRORLEVEL! NEQ 0 goto error
 )
 
-cd "%DEPLOYMENT_TARGET%"      
-cd
-call npm install
-call grunt build
-IF !ERRORLEVEL! NEQ 0 goto error
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 goto end
