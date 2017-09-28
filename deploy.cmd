@@ -82,7 +82,7 @@ IF /I "%IN_PLACE_DEPLOYMENT%" NEQ "1" (
 
 IF !ERRORLEVEL! NEQ 0 goto error
 
-# 3. Install NPM packages
+:: 3. Install NPM packages
 if [ -e "$DEPLOYMENT_TARGET/package.json" ]; then
   cd "$DEPLOYMENT_TARGET"
   eval $NPM_CMD install --production
@@ -90,7 +90,7 @@ if [ -e "$DEPLOYMENT_TARGET/package.json" ]; then
   cd - > /dev/null
 fi
 
-# 7. Run Grunt Task
+:: 7. Run Grunt Task
 if [ -e "$DEPLOYMENT_TARGET/Gruntfile.js" ]; then
   cd "$DEPLOYMENT_TARGET"
   eval ./node_modules/.bin/grunt
