@@ -94,7 +94,6 @@ IF !ERRORLEVEL! NEQ 0 goto error
 :: if [ -e "$DEPLOYMENT_TARGET/Gruntfile.js" ]; then
    echo pred cd
    cd "%DEPLOYMENT_TARGET%"      
-   call gem install sass
    call npm install
    call grunt build
    IF !ERRORLEVEL! NEQ 0 goto error

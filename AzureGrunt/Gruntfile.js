@@ -20,10 +20,10 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-sass');
+  //grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.registerTask('build_css', ['sass']);
   grunt.registerTask('build', ['build_css']);
-  grunt.registerTask('default', ['watch']);
+  //grunt.registerTask('default', ['watch']);
 };
