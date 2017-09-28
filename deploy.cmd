@@ -93,7 +93,8 @@ IF !ERRORLEVEL! NEQ 0 goto error
 :: 7. Run Grunt Task
 :: if [ -e "$DEPLOYMENT_TARGET/Gruntfile.js" ]; then
 :: fi
-cd "%DEPLOYMENT_SOURCE%"      
+cd
+cd "%DEPLOYMENT_TEMP%"      
 cd
 call npm install
 call grunt build
