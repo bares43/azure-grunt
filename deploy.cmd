@@ -96,7 +96,6 @@ cd "%DEPLOYMENT_TARGET%"
 call npm install
 call grunt build
 IF !ERRORLEVEL! NEQ 0 goto error
-cd - > /dev/null
 :: fi
 
 
