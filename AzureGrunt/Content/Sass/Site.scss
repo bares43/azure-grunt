@@ -23,8 +23,10 @@ textarea {
     max-width: 280px;
 }
 
+$color: green;
+
 .jumbotron {
     h1 {
-           color: yellow;
-       
+        color: $color;
+    }
 }
