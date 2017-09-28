@@ -92,12 +92,7 @@ IF !ERRORLEVEL! NEQ 0 goto error
 
 :: 7. Run Grunt Task
 :: if [ -e "$DEPLOYMENT_TARGET/Gruntfile.js" ]; then
-   echo pred cd
-   cd "%DEPLOYMENT_TARGET%"      
-   call npm install
-   call grunt build
-   IF !ERRORLEVEL! NEQ 0 goto error
-   cd - > /dev/null
+
 :: fi
 
 
@@ -106,6 +101,12 @@ IF /I "%IN_PLACE_DEPLOYMENT%" NEQ "1" (
   call :ExecuteCmd "%KUDU_SYNC_CMD%" -v 50 -f "%DEPLOYMENT_TEMP%" -t "%DEPLOYMENT_TARGET%" -n "%NEXT_MANIFEST_PATH%" -p "%PREVIOUS_MANIFEST_PATH%" -i ".git;.hg;.deployment;deploy.cmd"
   IF !ERRORLEVEL! NEQ 0 goto error
 )
+
+   cd "%DEPLOYMENT_TARGET%"      
+   call npm install
+   call grunt build
+   IF !ERRORLEVEL! NEQ 0 goto error
+   cd - > /dev/null
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 goto end

@@ -12,12 +12,12 @@ module.exports = function (grunt) {
         }]
       }
     },
-    watch: {
-      css: {
-        files: ['Content/Sass/*'],
-        tasks: ['build_css']
-      }
-    }
+    //watch: {
+    //  css: {
+    //    files: ['Content/Sass/*'],
+    //    tasks: ['build_css']
+    //  }
+    //}
   });
 
   grunt.loadNpmTasks('grunt-sass');
