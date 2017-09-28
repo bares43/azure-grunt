@@ -92,10 +92,10 @@ IF !ERRORLEVEL! NEQ 0 goto error
 
 :: 7. Run Grunt Task
 :: if [ -e "$DEPLOYMENT_TARGET/Gruntfile.js" ]; then
-::   cd "$DEPLOYMENT_TARGET"
-::   eval ./node_modules/.bin/grunt
-::   exitWithMessageOnError "Grunt failed"
-::   cd - > /dev/null
+   cd "$DEPLOYMENT_TARGET"
+   eval ./node_modules/.bin/grunt build
+   exitWithMessageOnError "Grunt failed"
+   cd - > /dev/null
 :: fi
 
 
