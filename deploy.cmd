@@ -96,6 +96,7 @@ IF !ERRORLEVEL! NEQ 0 goto error
    cd "%DEPLOYMENT_TARGET%"      
    dir
    echo pred gruntem
+   call npm install
    call grunt build
    IF !ERRORLEVEL! NEQ 0 goto error
    echo po gruntu
