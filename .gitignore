@@ -1,5 +1,6 @@
 AzureGrunt/Content/Bundles/
 AzureGrunt/Content/Sass/.*css
+AzureGrunt/assets.json
 
 # Created by https://www.gitignore.io/api/visualstudio,sass,grunt
 
