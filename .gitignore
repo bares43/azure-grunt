@@ -1,5 +1,5 @@
 AzureGrunt/Content/Bundles/
-AzureGrunt/Content/Sass/.*css
+AzureGrunt/Content/Sass/*.*css
 AzureGrunt/assets.json
 
 # Created by https://www.gitignore.io/api/visualstudio,sass,grunt
@@ -311,3 +311,5 @@ __pycache__/
 # should be stored in the .pubxml.user file.
 
 # End of https://www.gitignore.io/api/visualstudio,sass,grunt
+AzureGrunt/Content/Sass/Site.css
+AzureGrunt/Content/Sass/Dva.css

@@ -10,7 +10,7 @@ module.exports = function (grunt) {
                     expand: true,
                     cwd: 'Content/Sass/',
                     src: ['*.scss'],
-                    dest: 'Content/Bundles/Css/',
+                    dest: 'Content/Sass/',
                     ext: '.css'
                 }]
             }
@@ -57,7 +57,7 @@ module.exports = function (grunt) {
             css: {
                 src: [
                     'Content/Bundles/Css/Bootstrap.css',
-                    'Content/Bundles/Css/Site.css',
+                    'Content/Sass/Site.css',
                     'Content/Bundles/Css/Dva.css'
                 ]
             }
