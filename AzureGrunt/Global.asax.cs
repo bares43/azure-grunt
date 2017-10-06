@@ -12,7 +12,9 @@ namespace AzureGrunt {
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            BundleConfig.RegisterBundles(BundleTable.Bundles);
+            //BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            StaticAssets.Initialize(new StaticAssetResolver(Server.MapPath("~/assets.json"), HttpContext.Current.Cache));
         }
     }
 }
